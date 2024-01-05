@@ -1,0 +1,32 @@
+<h1 class="section-title-centered"><b>Available E-Books, Articles And Some External Links</b></h1>
+
+   <div class="container section">
+    <div *ngIf="books.length > 0" >
+      <h3 ><b>Books</b></h3>
+      <div *ngFor="let book of books" class="card" >
+        <h5 class="card-title"><b>{{ book.title }}</b></h5>
+        <img [src]="book.image" style="width:220px; height:200px;"><br>
+        <a [href]="book.link" class="btn btn-primary" target="_blank">View Resource</a>
+      </div>
+    </div>
+</div>
+
+<div class="container section">
+  <div *ngIf="articles.length > 0">
+    <h3><b>Articles</b></h3>
+    <div *ngFor="let article of articles" class="card ">
+      <h5 class="card-title"><b>{{ article.title }}</b></h5>
+      <a [href]="article.link" class="btn btn-primary" target="_blank">View Resource</a>
+    </div>
+  </div>
+</div>
+
+  <div class="container section">
+  <div *ngIf="externalLinks.length > 0">
+    <h3><b>External Links</b></h3>
+    <div *ngFor="let link of externalLinks" class="card">
+      <h5 class="card-title"><b>{{ link.title }}</b></h5>
+      <a [href]="link.link" class="btn btn-primary" target="_blank">View Resource</a>
+    </div>
+  </div>
+</div>

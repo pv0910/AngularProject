@@ -1,0 +1,16 @@
+<h2>Edit Content</h2>
+
+<label for="title">Title:</label>
+<input type="text" id="title" [(ngModel)]="editedContent.title" name="title" required>
+
+<label for="type">Type:</label>
+<input type="text" id="type" [(ngModel)]="editedContent.type" name="type" required>
+
+<label for="contentDetails">Content Details:</label>
+<textarea id="contentDetails" [(ngModel)]="editedContent.contentDetails" name="contentDetails" required></textarea>
+
+<label for="file">File:</label>
+<input type="text" id="file" [(ngModel)]="editedContent.file" name="file" required>
+
+<button mat-raised-button color="primary" (click)="saveChanges()">Save Changes</button>
+<button mat-raised-button color="primary" (click)="closeDialog()">Cancel</button>

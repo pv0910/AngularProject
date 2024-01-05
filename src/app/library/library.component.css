@@ -1,0 +1,54 @@
+.section-title-centered {
+    font-size: 28px;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 5px;
+    margin-bottom: 18px;
+    }
+  
+  .card {
+    margin: 40px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    background-color:thistle;
+    text-align: center;
+    width: 250px;
+    float: left; 
+  }
+  h1 {
+    display: block;
+    height: 40px;
+    background-color: palevioletred;
+    padding-top: 10px;
+  }
+  
+  .section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden; 
+  }
+  
+  .section h3 {
+    background-color:pink;
+  }
+  
+  .section h5 {
+    font-size: 1em;
+  }
+  
+  .section .card-title {
+    color: #0066cc;
+  }
+  
+  .section .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 3px;
+  }

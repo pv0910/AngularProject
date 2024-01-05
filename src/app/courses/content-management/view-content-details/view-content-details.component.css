@@ -1,0 +1,22 @@
+.content-details {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  p {
+    margin-bottom: 10px;
+  }
+  
+  strong {
+    font-weight: bold;
+    color: #0066cc; 
+  }

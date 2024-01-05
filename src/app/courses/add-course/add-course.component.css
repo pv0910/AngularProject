@@ -1,0 +1,39 @@
+h2 {
+    background-color: black;
+    color: thistle;
+    padding: 10px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    margin-top: 15px;
+    margin-right: 10px;
+  }
+  
+  button[type="button"] {
+    margin-top: 15px;
+    margin-right: 10px;
+    background-color: #FF4081;
+  }
+  
+  button[type="submit"] {
+    background-color: #2196F3;
+  }
+  

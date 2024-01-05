@@ -1,0 +1,43 @@
+<h2>Add New Course</h2>
+<form [formGroup]="addCourseForm" (submit)="submitForm()" style="margin: 30px;">
+  
+  <div class="form-group">
+    <label for="newCourseName">Course Name:</label>
+    <input type="text" id="newCourseName" formControlName="name" required>
+  </div>
+
+  <div class="form-group">
+    <label for="newCourseAuthor">Author:</label>
+    <input type="text" id="newCourseAuthor" formControlName="author" required>
+  </div>
+
+  <div class="form-group">
+    <label for="newCourseDuration">Duration (in hours):</label>
+    <input type="number" id="newCourseDuration" formControlName="duration" required>
+  </div>
+
+  <div class="form-group">
+    <label for="newCourseType">Type:</label>
+    <select id="newCourseType" formControlName="type" required>
+      <option value="Free">Free</option>
+      <option value="Premium">Premium</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="newCoursePrice">Price:</label>
+    <input type="number" id="newCoursePrice" formControlName="price" required>
+  </div>
+
+  <div class="form-group">
+    <label for="newCourseImage">Image URL:</label>
+    <input type="text" id="newCourseImage" formControlName="image" required>
+  </div>
+
+  <div class="form-group">
+    <label for="newCourseDescription">Description:</label>
+    <textarea id="newCourseDescription" formControlName="description" required></textarea>
+  </div>
+  <button type="submit" mat-raised-button color="primary">Add Course</button>
+  <button type="button" mat-raised-button color="warn" (click)="cancel()">Cancel</button>
+</form>

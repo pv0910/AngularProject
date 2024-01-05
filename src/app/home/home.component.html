@@ -1,0 +1,44 @@
+<body>
+
+    <div class="header">
+        <h1>Unlock Your Intellectual Potential</h1>
+        <img src="assets/HomePage.svg">
+        <p>IntellectHub is a platform designed to nurture your mind and foster continuous learning. Explore a world of knowledge and elevate your intellect with our diverse range of courses.</p>
+        <a routerLink="/register" *ngIf="!isloggedin()">Register Here</a>
+        <div *ngIf="!isloggedin()"> Already Registered? 
+          <a routerLink="/login" ><b>Login</b></a>
+        </div>
+    </div>
+    
+    <section>
+        <h2>Some Featured Courses</h2>
+        <div class="featured-courses">
+            <div class="course">
+                <h3>Introduction to Programming</h3>
+                <p>Learn the basics of programming with this introductory course.</p>
+            </div>
+
+            <div class="course">
+                <h3>Data Science Fundamentals</h3>
+                <p>Explore the world of data science and analytics in this comprehensive course.</p>
+            </div>
+
+            <div class="course">
+                <h3>Web Development Essentials</h3>
+                <p>Build essential web development skills with this hands-on course.</p>
+            </div>
+
+            <div class="course">
+                <h3>Graphic Design Mastery</h3>
+                <p>Unleash your creativity and master the art of graphic design in this visually engaging course.</p>
+            </div>
+            
+
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2023 Learning Management System
+    </footer>
+
+</body>

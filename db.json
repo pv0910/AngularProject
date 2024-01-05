@@ -1,0 +1,256 @@
+{
+  "user": [
+    {
+      "id": "pjvpjv",
+      "name": "pooja",
+      "password": "Pooja@90045",
+      "email": "pjv9@gmail.com",
+      "gender": "female",
+      "role": "admin",
+      "isactive": true
+    },
+    {
+      "id": "pppppp",
+      "name": "ppkk",
+      "password": "Pooja@1122",
+      "email": "Pjj@gmail.com",
+      "gender": "female",
+      "role": "learner",
+      "isactive": true
+    },
+    {
+      "id": "pkpkpk",
+      "name": "khushi1",
+      "password": "Pooja@90045",
+      "email": "pk@gmail.com",
+      "gender": "female",
+      "role": "instructor",
+      "isactive": true
+    },
+    {
+      "id": "rashmi12",
+      "name": "Rasmi",
+      "password": "Rashmi@12",
+      "email": "rashmi12@gmail.com",
+      "gender": "male",
+      "role": "",
+      "isactive": false
+    }
+  ],
+  "role": [
+    {
+      "code": "learner",
+      "name": "Learner"
+    },
+    {
+      "code": "instructor",
+      "name": "Instructor"
+    }
+  ],
+  "courses": [
+    {
+      "id": 101,
+      "name": "Javascript for beginners",
+      "author": "John Heikela",
+      "duration": 48,
+      "type": "Free",
+      "price": 0,
+      "image": "assets/jsforbeginners.jpeg",
+      "description": "`In this course, you will learn the fundamentals of JavaScript. This course is purely designed for beginners.`"
+    },
+    {
+      "id": 102,
+      "name": "Web Development Fundamentals",
+      "author": "Emma Johnson",
+      "duration": 60,
+      "type": "Premium",
+      "price": 29.99,
+      "image": "assets/webDev.jpeg",
+      "description": "Explore the basics of web development, including HTML, CSS, and JavaScript."
+    },
+    {
+      "id": 103,
+      "name": "Data Science Essentials",
+      "author": "'Michael Smith'",
+      "duration": 75,
+      "type": "Premium",
+      "price": 49.99,
+      "image": "assets/dataScience.jpeg",
+      "description": "'Learn the essential concepts and tools of data science for analysis and visualization.'"
+    },
+    {
+      "id": 104,
+      "name": "React.js Mastery",
+      "author": " 'Sarah Williams'",
+      "duration": 50,
+      "type": "Free",
+      "price": 0,
+      "image": "assets/reactJs.jpeg",
+      "description": "'Master the art of building user interfaces with React.js and its ecosystem.'"
+    },
+    {
+      "id": 105,
+      "name": "Python Programming Basics",
+      "author": "'Alex Turner'",
+      "duration": 45,
+      "type": "Free",
+      "price": 0,
+      "image": "assets/python.png",
+      "description": "'Get started with the basics of Python programming language for beginners.'"
+    },
+    {
+      "id": 106,
+      "name": "Angular Framework Overview",
+      "author": "'Chris Brown'",
+      "duration": 55,
+      "type": "Premium",
+      "price": 39.99,
+      "image": "assets/angular.jpeg",
+      "description": "'Explore the features and architecture of the Angular framework for building modern web applications.'"
+    },
+    {
+      "id": 107,
+      "name": "Machine Learning Fundamentals",
+      "author": "'Emily Davis'",
+      "duration": 80,
+      "type": "Premium",
+      "price": 59.99,
+      "image": "assets/machineLearning.jpeg",
+      "description": "'Understand the fundamentals of machine learning and its applications in various domains.'"
+    },
+    {
+      "id": 108,
+      "name": "Node.js for Backend Development",
+      "author": "'Daniel Jackson'",
+      "duration": 65,
+      "type": "Free",
+      "price": 0,
+      "image": "assets/nodeJs.webp",
+      "description": "'Learn how to build scalable and efficient backend applications with Node.js.'"
+    },
+    {
+      "id": 109,
+      "name": "UX/UI Design Principles",
+      "author": "'Sophia Martinez'",
+      "duration": 40,
+      "type": "Free",
+      "price": 0,
+      "image": "assets/Ui_Uxdesign.jpeg",
+      "description": " 'Discover the principles of user experience (UX) and user interface (UI) design for creating engaging applications.'"
+    },
+    {
+      "id": 110,
+      "name": "Cybersecurity Basics",
+      "author": " 'Kevin Lee'",
+      "duration": 70,
+      "type": "Premium",
+      "price": 44.99,
+      "image": "assets/cyber.jpeg",
+      "description": "'Gain foundational knowledge in cybersecurity and learn about common threats and protection strategies.'"
+    }
+  ],
+  "enrollments": [],
+  "resources": [
+    {
+      "id": 1,
+      "title": "Introduction to JavaScript",
+      "type": "Article",
+      "link": "https://www.codecademy.com/articles/language/javascript"
+    },
+    {
+      "id": 2,
+      "title": "JavaScript: For Absolute Beginners",
+      "type": "Book",
+      "image": "assets/jsbook.webp",
+      "link": "https://pepa.holla.cz/wp-content/uploads/2015/11/JavaScript-for-Absolute-Beginners.pdf"
+    },
+    {
+      "id": 3,
+      "title": "Angular Testing",
+      "type": "Link",
+      "link": "https://codecraft.tv/courses/angular/unit-testing/jasmine-and-karma/"
+    },
+    {
+      "id": 1,
+      "title": "Introduction to Angular",
+      "type": "Article",
+      "link": "https://angular.io/guide/what-is-angular"
+    },
+    {
+      "id": 2,
+      "title": "Learning Angular",
+      "type": "Book",
+      "image": "assets/angbook.jpeg",
+      "link": "https://dl.ebooksworld.ir/books/Learning.Angular.4th.Edition.Aristeidis.Bampakos.Packt.9781803240602.EBooksWorld.ir.pdf"
+    },
+    {
+      "id": 3,
+      "title": "React Fundamentals",
+      "type": "Book",
+      "image": "assets/reactbook.jpeg",
+      "link": "https://dl.ebooksworld.ir/books/Beginning.ReactJS.Foundations.Chris.Minnick.Wiley.9781119685548.EBooksWorld.ir.pdf"
+    },
+    {
+      "id": 4,
+      "title": "Learn About Typescript",
+      "type": "Article",
+      "link": "https://medium.com/@diego.coder/introduction-to-typescript-6b328184dba1"
+    },
+    {
+      "id": 5,
+      "title": "More About Angular",
+      "type": "Link",
+      "link": "https://www.simplilearn.com/tutorials/angular-tutorial/what-is-angular"
+    }
+  ],
+  "content": [
+    {
+      "id": 1,
+      "title": "Lecture 1",
+      "type": "Lecture1",
+      "courseId": 101,
+      "contentDetails": "Content details....",
+      "file": "lecture1.pdf"
+    },
+    {
+      "id": 2,
+      "title": "Quiz 1",
+      "type": "Quiz",
+      "courseId": 101,
+      "contentDetails": "Quiz details...",
+      "file": "quiz1.pdf"
+    },
+    {
+      "id": 3,
+      "title": "Assignment 1",
+      "type": "Assignment",
+      "courseId": 102,
+      "contentDetails": "Assignment details...",
+      "file": "assignment1.pdf"
+    },
+    {
+      "id": 4,
+      "title": "Lecture 1A",
+      "type": "Lecture",
+      "courseId": 102,
+      "contentDetails": "Content details...",
+      "file": "lecture1.pdf"
+    },
+    {
+      "id": 5,
+      "title": "Quiz 1",
+      "type": "Quiz",
+      "courseId": 102,
+      "contentDetails": "Quiz details...",
+      "file": "quiz1.pdf"
+    },
+    {
+      "id": 6,
+      "title": "Assignment 1",
+      "type": "Assignment",
+      "courseId": 102,
+      "contentDetails": "Assignment details...",
+      "file": "assignment1.pdf"
+    }
+  ]
+}

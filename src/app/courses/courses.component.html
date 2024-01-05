@@ -1,0 +1,39 @@
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <div>
+      <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
+      <app-filter
+        [all]="getTotalCourses()"
+        [free]="getTotalFreeCourses()"
+        [premium]="getTotalPremiumCourses()"
+        (filterRadioButtonSelectionChanged)="onFilterRadioButtonChanged($event)"
+      ></app-filter>
+    </div>
+  
+    <button mat-raised-button color="primary" (click)="openAddCourseDialog()" style="margin-right: 50px;"  *ngIf="isadmin">Add Course</button>
+  </div>
+
+<div class="container">
+    <h2 style="background-color: black; color:thistle">All Courses</h2>
+    <ng-container *ngFor="let course of courses">
+        <div class="course-container" *ngIf="(searchText === '' || course.name.toLowerCase().includes(searchText)) && (courseCountRadioButton === 'All' || courseCountRadioButton === course.type)">
+            <div class="course-card ">
+                <div>
+                    <img [src]="course.image" style="width:220px; height:140px;">
+                </div>
+                <div class="course-name"><h4>{{ course.name}}</h4></div>
+                <div class="course-description"><p>{{course.description.slice(0, 80)}}...</p></div>
+                <div class="details">
+                    <div class="course-type" [ngStyle]="{color: course.type === 'Free' ? 'Green' : 'Red'}">{{course.type}}</div>
+                    <div class="course-price"><b>Price:</b> ${{course.price}}</div>
+                </div>
+                <div class="course-buttons">
+                    <button class="btn" [ngStyle]="{ 'background-color': enrolledCourses[course.id] ? 'orange' : 'green', 'color': 'white' }" (click)="toggleEnrollment(course.id)">
+                        {{ enrolledCourses[course.id] ? 'Unenroll' : 'Enroll' }}
+                      </button>
+                    <button class="btn btn-show" routerLink="course/{{course.id}}">Show Deatils</button>
+                    <button class="btn btn-remove" (click)="removeCourse(course.id)" *ngIf="isadmin">Remove</button>
+                </div>
+            </div>
+        </div>  
+    </ng-container>
+</div>
