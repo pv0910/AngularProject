@@ -5,7 +5,13 @@ import { LibraryService } from './library.service';
 describe('LibraryService', () => {
   let libraryService: LibraryService;
   let httpTestingController: HttpTestingController;
-
+  const mockResources = [
+    {
+      "id": 1,
+      "title": "JavaScript: For Absolute Beginners",
+      "type": "Book"
+    },
+    ];
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
@@ -16,24 +22,35 @@ describe('LibraryService', () => {
     httpTestingController = TestBed.inject(HttpTestingController);
   });
 
-  it('should be created', () => {
-    expect(libraryService).toBeTruthy();
-  });
-
-  it('should get library resources', () => {
-    const mockResources = [{ id: 1, title: 'Resource A' }, { id: 2, title: 'Resource B' }];
-
-    libraryService.getLibraryResources().subscribe((resources) => {
-      expect(resources).toEqual(mockResources);
+  it('should get library resources successfully', () => {
+    libraryService.getLibraryResources().subscribe(response => {
+      expect(response).toEqual(mockResources);
     });
-
-    const req = httpTestingController.expectOne('http://localhost:3000/resources');
+  
+    const req = httpTestingController.expectOne(`${libraryService.apiUrl}`);
     expect(req.request.method).toEqual('GET');
-
     req.flush(mockResources);
-    httpTestingController.verify();
   });
-
+  it('should handle error when fetching library resources fails', () => {
+    libraryService.getLibraryResources().subscribe(
+      () => fail('Expected an error, but got a successful response'),
+      error => {
+        expect(error.status).toBe(500); 
+      }
+    );
+  
+    const req = httpTestingController.expectOne(`${libraryService.apiUrl}`);
+    req.flush('Internal Server Error', { status: 500, statusText: 'Internal Server Error' });
+  });
+  it('should handle empty response when no library resources are available', () => {
+    libraryService.getLibraryResources().subscribe(response => {
+      expect(response).toEqual([]);
+    });
+  
+    const req = httpTestingController.expectOne(`${libraryService.apiUrl}`);
+    expect(req.request.method).toEqual('GET');
+    req.flush([]);
+  });
   afterEach(() => {
     httpTestingController.verify();
   });

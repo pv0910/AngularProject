@@ -30,7 +30,7 @@
                     <button class="btn" [ngStyle]="{ 'background-color': enrolledCourses[course.id] ? 'orange' : 'green', 'color': 'white' }" (click)="toggleEnrollment(course.id)">
                         {{ enrolledCourses[course.id] ? 'Unenroll' : 'Enroll' }}
                       </button>
-                    <button class="btn btn-show" routerLink="course/{{course.id}}">Show Deatils</button>
+                    <button class="btn btn-show" routerLink="course/{{course.id}}">Show Details</button>
                     <button class="btn btn-remove" (click)="removeCourse(course.id)" *ngIf="isadmin">Remove</button>
                 </div>
             </div>

@@ -6,7 +6,7 @@ import { Observable, catchError } from 'rxjs';
   providedIn: 'root'
 })
 export class ContentManagementService {
-  private apiUrl = 'http://localhost:3000/content';
+  public apiUrl = 'http://localhost:3000/content';
 
   constructor(private http: HttpClient) {}
 
