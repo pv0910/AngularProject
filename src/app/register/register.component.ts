@@ -15,7 +15,7 @@ export class RegisterComponent {
 
   }
 
-  registerform = this.builder.group({
+  public registerform = this.builder.group({
     id: this.builder.control('', Validators.compose([Validators.required, Validators.minLength(5)])),
     name: this.builder.control('', Validators.required),
     password: this.builder.control('', Validators.compose([Validators.required, Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}')])),
@@ -24,7 +24,7 @@ export class RegisterComponent {
     role: this.builder.control(''),
     isactive: this.builder.control(false)
   });
-  proceedregister() {
+  public proceedregister() {
     if (this.registerform.valid) {
       this.service.RegisterUser(this.registerform.value).subscribe(result => {
         this.toastr.success('Please contact admin for enable access.','Registered successfully');

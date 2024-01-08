@@ -12,31 +12,31 @@ export class AuthService {
   }
   apiurl='http://localhost:3000/user';
 
-  RegisterUser(inputdata:any){
+  public RegisterUser(inputdata:any){
     return this.http.post(this.apiurl,inputdata)
   }
-  GetUserbyCode(id:any){
+  public GetUserbyCode(id:any){
     return this.http.get(this.apiurl+'/'+id);
   }
-  updatePassword(id: any, newPassword: string): Observable<any> {
+  public updatePassword(id: any, newPassword: string): Observable<any> {
     const url = `${this.apiurl}/${id}/password`;
     return this.http.patch(url, { newPassword });
   }
-  Getall(){
+  public Getall(){
     return this.http.get(this.apiurl);
   }
-  updateuser(id: any, inputdata: any): Observable<any> {
+  public updateuser(id: any, inputdata: any): Observable<any> {
     const url = `${this.apiurl}/${id}`;
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
         return this.http.patch(url, inputdata, { headers });
   }
-  getuserrole(){
+  public getuserrole(){
     return this.http.get('http://localhost:3000/role');
   }
-  isloggedin(){
+  public isloggedin(){
     return sessionStorage.getItem('username')!=null;
   }
-  getrole(){
+  public getrole(){
     return sessionStorage.getItem('role')!=null?sessionStorage.getItem('role')?.toString():'';
   }
 }

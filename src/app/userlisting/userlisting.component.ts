@@ -17,15 +17,15 @@ export class UserlistingComponent implements AfterViewInit {
   constructor(private builder: FormBuilder, private service: AuthService, private dialog: MatDialog) {
     this.LoadUser();
   }
-  userlist: any;
-  dataSource: any;
+  public userlist: any;
+  public dataSource: any;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
   ngAfterViewInit(): void {
 
   }
-  LoadUser() {
+  public LoadUser() {
     this.service.Getall().subscribe(res => {
       this.userlist = res;
       this.dataSource = new MatTableDataSource(this.userlist);
@@ -35,11 +35,11 @@ export class UserlistingComponent implements AfterViewInit {
   }
   displayedColumns: string[] = ['username', 'name', 'email', 'status', 'role', 'action'];
 
-  updateuser(code: any) {
+  public updateuser(code: any) {
     this.OpenDialog('1000ms', '600ms', code);
   }
 
-  OpenDialog(enteranimation: any, exitanimation: any, code: string) {
+  public OpenDialog(enteranimation: any, exitanimation: any, code: string) {
     const popup = this.dialog.open(UpdatepopupComponent, {
       enterAnimationDuration: enteranimation,
       exitAnimationDuration: exitanimation,
@@ -52,7 +52,4 @@ export class UserlistingComponent implements AfterViewInit {
       this.LoadUser();
     });
   }
-
-
-
 }

@@ -15,14 +15,14 @@ export class LoginComponent {
       sessionStorage.clear();
 
   }
-  result: any;
+  public result: any;
 
-  loginform = this.builder.group({
+  public loginform = this.builder.group({
     id: this.builder.control('', Validators.required),
     password: this.builder.control('', Validators.required)
   });
 
-  proceedlogin() {
+  public proceedlogin() {
     if (this.loginform.valid) {
       this.service.GetUserbyCode(this.loginform.value.id).subscribe(item => {
         this.result = item;

@@ -10,31 +10,22 @@
       "isactive": true
     },
     {
-      "id": "pppppp",
-      "name": "ppkk",
-      "password": "Pooja@1122",
-      "email": "Pjj@gmail.com",
+      "id": "pooja123",
+      "name": "Pooja",
+      "password": "Pooja@9004",
+      "email": "pjv@gmail.com",
       "gender": "female",
       "role": "learner",
       "isactive": true
     },
     {
-      "id": "pkpkpk",
-      "name": "khushi1",
-      "password": "Pooja@90045",
-      "email": "pk@gmail.com",
+      "id": "khushi12",
+      "name": "Khushi",
+      "password": "Khushi@12345",
+      "email": "kv@gmail.com",
       "gender": "female",
       "role": "instructor",
       "isactive": true
-    },
-    {
-      "id": "rashmi12",
-      "name": "Rasmi",
-      "password": "Rashmi@12",
-      "email": "rashmi12@gmail.com",
-      "gender": "male",
-      "role": "",
-      "isactive": false
     }
   ],
   "role": [
@@ -56,7 +47,7 @@
       "type": "Free",
       "price": 0,
       "image": "assets/jsforbeginners.jpeg",
-      "description": "`In this course, you will learn the fundamentals of JavaScript. This course is purely designed for beginners.`"
+      "description": "In this course, you will learn the fundamentals of JavaScript. This course is purely designed for beginners."
     },
     {
       "id": 102,
@@ -149,7 +140,23 @@
       "description": "'Gain foundational knowledge in cybersecurity and learn about common threats and protection strategies.'"
     }
   ],
-  "enrollments": [],
+  "enrollments": [
+    {
+      "courseId": 103,
+      "userId": "pjvpjv",
+      "id": 1
+    },
+    {
+      "courseId": 101,
+      "userId": "pjvpjv",
+      "id": 2
+    },
+    {
+      "courseId": 101,
+      "userId": "khushi12",
+      "id": 3
+    }
+  ],
   "resources": [
     {
       "id": 1,
@@ -206,51 +213,384 @@
   "content": [
     {
       "id": 1,
-      "title": "Lecture 1",
+      "title": "Lecture 1: Introduction to JavaScript",
       "type": "Lecture1",
       "courseId": 101,
-      "contentDetails": "Content details....",
+      "contentDetails": [
+        {
+          "id": 1,
+          "title": "Introduction",
+          "type": "Subsection",
+          "courseId": 101,
+          "contentDetails": [
+            {
+              "id": 1,
+              "title": "Brief history and purpose of JavaScript.",
+              "type": "Topic",
+              "courseId": 101
+            },
+            {
+              "id": 2,
+              "title": "JavaScript's role in web development.",
+              "type": "Topic",
+              "courseId": 101
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Setting Up",
+          "type": "Subsection",
+          "courseId": 101,
+          "contentDetails": [
+            {
+              "id": 3,
+              "title": "Embedding JavaScript in HTML.",
+              "type": "Topic",
+              "courseId": 101
+            },
+            {
+              "id": 4,
+              "title": "Using the browser's developer tools.",
+              "type": "Topic",
+              "courseId": 101
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Basic Syntax",
+          "type": "Subsection",
+          "courseId": 101,
+          "contentDetails": [
+            {
+              "id": 5,
+              "title": "Variables and data types.",
+              "type": "Topic",
+              "courseId": 101
+            },
+            {
+              "id": 6,
+              "title": "Operators.",
+              "type": "Topic",
+              "courseId": 101
+            },
+            {
+              "id": 7,
+              "title": "Comments.",
+              "type": "Topic",
+              "courseId": 101
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Control Flow",
+          "type": "Subsection",
+          "courseId": 101,
+          "contentDetails": [
+            {
+              "id": 8,
+              "title": "Conditional statements (if, else if, else).",
+              "type": "Topic",
+              "courseId": 101
+            },
+            {
+              "id": 9,
+              "title": "Looping (for, while).",
+              "type": "Topic",
+              "courseId": 101
+            }
+          ]
+        }
+      ],
       "file": "lecture1.pdf"
     },
     {
       "id": 2,
-      "title": "Quiz 1",
-      "type": "Quiz",
+      "title": "Lecture 2: Functions and Objects",
+      "type": "Lecture2",
       "courseId": 101,
-      "contentDetails": "Quiz details...",
-      "file": "quiz1.pdf"
+      "contentDetails": [
+        {
+          "id": 1,
+          "title": "Functions",
+          "type": "Subsection",
+          "courseId": 101,
+          "contentDetails": [
+            {
+              "id": 1,
+              "title": "Declaring functions.",
+              "type": "Topic",
+              "courseId": 101
+            },
+            {
+              "id": 2,
+              "title": "Parameters and return values.",
+              "type": "Topic",
+              "courseId": 101
+            },
+            {
+              "id": 3,
+              "title": "Function expressions.",
+              "type": "Topic",
+              "courseId": 101
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Objects",
+          "type": "Subsection",
+          "courseId": 101,
+          "contentDetails": [
+            {
+              "id": 4,
+              "title": "Creating and manipulating objects.",
+              "type": "Topic",
+              "courseId": 101
+            },
+            {
+              "id": 5,
+              "title": "Object properties and methods.",
+              "type": "Topic",
+              "courseId": 101
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Arrays",
+          "type": "Subsection",
+          "courseId": 101,
+          "contentDetails": [
+            {
+              "id": 6,
+              "title": "Creating and manipulating arrays.",
+              "type": "Topic",
+              "courseId": 101
+            },
+            {
+              "id": 7,
+              "title": "Array methods (push, pop, shift, unshift, etc.).",
+              "type": "Topic",
+              "courseId": 101
+            }
+          ]
+        }
+      ],
+      "file": "lecture2.pdf"
     },
     {
       "id": 3,
-      "title": "Assignment 1",
+      "title": "Assignment 1: Implement a Web Page",
       "type": "Assignment",
-      "courseId": 102,
-      "contentDetails": "Assignment details...",
-      "file": "assignment1.pdf"
-    },
-    {
-      "id": 4,
-      "title": "Lecture 1A",
-      "type": "Lecture",
-      "courseId": 102,
-      "contentDetails": "Content details...",
-      "file": "lecture1.pdf"
+      "courseId": 101,
+      "contentDetails": {
+        "instructions": "Implement a web page that uses JavaScript to create an interactive form. The form should include fields for user input, and the JavaScript code should handle form validation.",
+        "submissionDetails": "Submit your web page files as a ZIP archive.",
+        "dueDate": "2024-02-25"
+      }
     },
     {
       "id": 5,
-      "title": "Quiz 1",
+      "title": "Quiz 1: Java Script Basics",
       "type": "Quiz",
+      "courseId": 101,
+      "contentDetails": {
+        "questions": [
+          {
+            "id": 1,
+            "questionText": "What is the purpose of declaring functions in JavaScript?",
+            "options": [
+              "To create objects",
+              "To define variables",
+              "To execute code",
+              "To perform mathematical operations"
+            ]
+          },
+          {
+            "id": 2,
+            "questionText": "How are objects created in JavaScript?",
+            "options": [
+              "Using functions",
+              "Using loops",
+              "Using conditions",
+              "Using arrays"
+            ]
+          },
+          {
+            "id": 3,
+            "questionText": "What does the 'push' method do in JavaScript arrays?",
+            "options": [
+              "Remove an element",
+              "Add an element to the beginning",
+              "Add an element to the end",
+              "Sort the array"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "title": "Lecture 1: Introduction to Web Development",
+      "type": "Lecture1",
       "courseId": 102,
-      "contentDetails": "Quiz details...",
-      "file": "quiz1.pdf"
+      "contentDetails": [
+        {
+          "id": 1,
+          "title": "Introduction",
+          "type": "Subsection",
+          "courseId": 102,
+          "contentDetails": [
+            {
+              "id": 1,
+              "title": "Overview of Web Development",
+              "type": "Topic",
+              "courseId": 102
+            },
+            {
+              "id": 2,
+              "title": "Importance of HTML and CSS",
+              "type": "Topic",
+              "courseId": 102
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "HTML Basics",
+          "type": "Subsection",
+          "courseId": 102,
+          "contentDetails": [
+            {
+              "id": 3,
+              "title": "Understanding HTML Structure",
+              "type": "Topic",
+              "courseId": 102
+            },
+            {
+              "id": 4,
+              "title": "HTML Elements and Tags",
+              "type": "Topic",
+              "courseId": 102
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "CSS Basics",
+          "type": "Subsection",
+          "courseId": 102,
+          "contentDetails": [
+            {
+              "id": 5,
+              "title": "Introduction to CSS",
+              "type": "Topic",
+              "courseId": 102
+            },
+            {
+              "id": 6,
+              "title": "Selectors and Styles",
+              "type": "Topic",
+              "courseId": 102
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Responsive Design",
+          "type": "Subsection",
+          "courseId": 102,
+          "contentDetails": [
+            {
+              "id": 7,
+              "title": "Media Queries",
+              "type": "Topic",
+              "courseId": 102
+            },
+            {
+              "id": 8,
+              "title": "Flexbox and Grid Layout",
+              "type": "Topic",
+              "courseId": 102
+            }
+          ]
+        }
+      ],
+      "file": "web-development-lecture1.pdf"
     },
     {
       "id": 6,
-      "title": "Assignment 1",
+      "title": "Assignment 1: Build a Personal Portfolio",
       "type": "Assignment",
       "courseId": 102,
-      "contentDetails": "Assignment details...",
-      "file": "assignment1.pdf"
+      "contentDetails": {
+        "instructions": "Create a personal portfolio website using HTML and CSS. Showcase your skills, projects, and any other relevant information. Ensure that your portfolio is responsive.",
+        "submissionDetails": "Submit the entire project folder as a ZIP archive.",
+        "dueDate": "2024-03-15"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Quiz 1: Web Development Basics",
+      "type": "Quiz",
+      "courseId": 102,
+      "contentDetails": {
+        "questions": [
+          {
+            "id": 1,
+            "questionText": "What is the purpose of HTML?",
+            "options": [
+              "To style web pages",
+              "To structure content on the web",
+              "To define programming logic",
+              "To handle server-side operations"
+            ]
+          },
+          {
+            "id": 2,
+            "questionText": "Which of the following tags is used to create a hyperlink in HTML?",
+            "options": [
+              "<a>",
+              "<h1>",
+              "<p>",
+              "<div>"
+            ]
+          },
+          {
+            "id": 3,
+            "questionText": "What does CSS stand for?",
+            "options": [
+              "Counter Style Sheet",
+              "Computer Style Sheet",
+              "Creative Style Sheet",
+              "Cascading Style Sheet"
+            ]
+          },
+          {
+            "id": 4,
+            "questionText": "How can you include external JavaScript code in an HTML file?",
+            "options": [
+              "<script src='external.js'></script>",
+              "<js src='external.js'></js>",
+              "<include src='external.js'></include>",
+              "<javascript src='external.js'></javascript>"
+            ]
+          },
+          {
+            "id": 5,
+            "questionText": "What does the 'box model' in CSS refer to?",
+            "options": [
+              "A model for organizing code",
+              "A design pattern",
+              "A layout model with content, padding, border, and margin",
+              "A model for handling events"
+            ]
+          }
+        ]
+      }
     }
   ]
 }

@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./add-course.component.css']
 })
 export class AddCourseComponent{
-  addCourseForm: FormGroup;
+  public addCourseForm: FormGroup;
 
   constructor(
     private dialogRef: MatDialogRef<AddCourseComponent>,
@@ -25,13 +25,13 @@ export class AddCourseComponent{
       description: ['', Validators.required],
     });
   }
-  submitForm() {
+  public submitForm() {
     if (this.addCourseForm.valid) {
       this.dialogRef.close(this.addCourseForm.value);
     }
   }
 
-  cancel() {
+  public cancel() {
     this.dialogRef.close();
   }
 }

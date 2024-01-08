@@ -8,8 +8,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./view-content-details.component.css']
 })
 export class ViewContentDetailsComponent implements OnInit {
-  contentId!: number;
-  contentDetails: any;
+  public contentId!: number;
+  public contentDetails: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -23,7 +23,7 @@ export class ViewContentDetailsComponent implements OnInit {
     });
   }
 
-  getContentDetails() {
+  public getContentDetails() {
     this.contentService.getContentDetails(this.contentId).subscribe((details) => {
       this.contentDetails = details;
     });

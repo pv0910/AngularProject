@@ -1,9 +1,37 @@
 <div class="content-details">
-    <h2>Content Details</h2>
-    <div *ngIf="contentDetails">
-      <p><strong>Title:</strong> {{ contentDetails.title }}</p>
-      <p><strong>Content Details:</strong> {{ contentDetails.contentDetails }}</p>
+  <h2>Content Details</h2>
+  <div *ngIf="contentDetails">
+    <p><strong>Title:</strong> {{ contentDetails.title }}</p>
+    <ng-container *ngIf="contentDetails.type === 'Lecture1' || contentDetails.type === 'Lecture2'">
+      <div *ngFor="let subsection of contentDetails.contentDetails">
+        <p><strong>Subsection:</strong> {{ subsection.title }}</p>
+        <ul>
+          <li *ngFor="let topic of subsection.contentDetails">
+            <p><strong>Topic:</strong> {{ topic.title }}</p>
+          </li>
+        </ul>
+      </div>
       <p><strong>File:</strong> {{ contentDetails.file }}</p>
-    </div>
+    </ng-container>
+    <ng-container *ngIf="contentDetails.type === 'Assignment' || contentDetails.type === 'Quiz'">
+      <div *ngIf="contentDetails.type === 'Assignment'">
+        <p><strong>Instructions:</strong> {{ contentDetails.contentDetails.instructions }}</p>
+        <p><strong>Submission Details:</strong> {{ contentDetails.contentDetails.submissionDetails }}</p>
+        <p><strong>Due Date:</strong> {{ contentDetails.contentDetails.dueDate }}</p>
+      </div>
+      <div *ngIf="contentDetails.type === 'Quiz'">
+        <p><strong>Quiz:</strong></p>
+        <ul>
+          <li *ngFor="let question of contentDetails.contentDetails.questions">
+            <p><strong>Question:</strong> {{ question.questionText }}</p>
+            <ul>
+              <li *ngFor="let option of question.options">
+                <p>{{ option }}</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </ng-container>
   </div>
-  
+</div>

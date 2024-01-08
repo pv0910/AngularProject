@@ -2,7 +2,7 @@
     <h2>All Content</h2>
   
     <div *ngIf="isadmin">
-      <h3>Create New Content</h3>
+      <h3><b>Create New Content</b></h3>
       <form (submit)="createContent()" #contentForm="ngForm">
         <label for="title">Title:</label>
         <input type="text" id="title" [(ngModel)]="newContent['title']" name="title" required>
@@ -32,7 +32,7 @@
     </div>
   
     <div >
-      <h3>Course content</h3>
+      <h3><b>Course content</b></h3>
       <ul >
         <li *ngFor="let content of allContent">
           <span>{{content['title']}}</span>

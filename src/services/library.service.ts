@@ -10,7 +10,7 @@ export class LibraryService {
 
   constructor(private http: HttpClient) {}
 
-  getLibraryResources(): Observable<any[]> {
+  public getLibraryResources(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
   }
 }

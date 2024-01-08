@@ -10,12 +10,12 @@ export class FilterComponent {
  @Input() free:number=0;
  @Input() premium:number=0;
 
- selectedRadioButtonValue: string ='All';
+ public selectedRadioButtonValue: string ='All';
 
  @Output()
  filterRadioButtonSelectionChanged: EventEmitter<string>=new EventEmitter<string>();
 
- onRadioButtonSelectionChanged(){
+ public onRadioButtonSelectionChanged(){
   this.filterRadioButtonSelectionChanged.emit(this.selectedRadioButtonValue);
   console.log(this.selectedRadioButtonValue)
  }

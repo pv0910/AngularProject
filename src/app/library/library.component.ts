@@ -7,9 +7,9 @@ import { LibraryService } from '../../services/library.service';
   styleUrls: ['./library.component.css']
 })
 export class LibraryComponent implements OnInit {
-  books: any[] = [];
-  articles: any[] = [];
-  externalLinks: any[] = [];
+  public books: any[] = [];
+  public articles: any[] = [];
+  public externalLinks: any[] = [];
 
   constructor(private libraryService: LibraryService) {}
 

@@ -10,27 +10,27 @@ export class CoursesService {
 
   constructor(private http: HttpClient) {}
 
-  getCourses(): Observable<any[]> {
+  public getCourses(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
   }
 
-  getTotalCourses(courses: any[]): number {
+  public getTotalCourses(courses: any[]): number {
     return courses.length;
   }
 
-  getTotalFreeCourses(courses: any[]): number {
+  public getTotalFreeCourses(courses: any[]): number {
     return courses.filter((course) => course.type === 'Free').length;
   }
 
-  getTotalPremiumCourses(courses: any[]): number {
+  public getTotalPremiumCourses(courses: any[]): number {
     return courses.filter((course) => course.type === 'Premium').length;
   }
 
-  addCourse(newCourse: any): Observable<any> {
+  public addCourse(newCourse: any): Observable<any> {
     return this.http.post<any>(this.apiUrl, newCourse);
   }
 
-  removeCourse(courseId: number): Observable<any> {
+  public removeCourse(courseId: number): Observable<any> {
     const url = `${this.apiUrl}/${courseId}`;
     return this.http.delete(url);
   }

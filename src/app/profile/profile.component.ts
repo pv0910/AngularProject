@@ -9,7 +9,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./profile.component.css'],
 })
 export class ProfileComponent implements OnInit {
-  profileForm = this.builder.group({
+  public profileForm = this.builder.group({
     id: ['', Validators.required],
     name: ['', Validators.required],
     email: ['', [Validators.required, Validators.email]],
@@ -29,7 +29,7 @@ export class ProfileComponent implements OnInit {
     });
   }
 
-  updateProfile() {
+  public updateProfile() {
     if (this.profileForm.valid) {
       const userId = sessionStorage.getItem('username');
       const updatedUser = { ...this.profileForm.value };
@@ -42,7 +42,7 @@ export class ProfileComponent implements OnInit {
     }
   }
 
-  changePassword() {
+  public changePassword() {
     const newPassword = this.profileForm.get('newPassword')?.value;
     if (this.profileForm.get('newPassword')?.valid) {
       const userId = sessionStorage.getItem('username');

@@ -10,10 +10,10 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./content-management.component.css'],
 })
 export class ContentManagementComponent implements OnInit {
-  newContent: any = {};
-  allContent: any[] = [];
-  selectedCourseId: number = 0;
-  isadmin=false;
+  public newContent: any = {};
+  public allContent: any[] = [];
+  public selectedCourseId: number = 0;
+  public isadmin=false;
   
   constructor(
     private contentService: ContentManagementService,
@@ -39,20 +39,20 @@ export class ContentManagementComponent implements OnInit {
     });
   }
 
-  filterContentByCourseId() {
+  public filterContentByCourseId() {
     this.contentService.getContentByCourseId(this.selectedCourseId).subscribe((content) => {
       this.allContent = content;
     });
   }
 
-  loadAllContent() {
+  public loadAllContent() {
     this.contentService.getAllContent().subscribe((content) => {
       this.allContent = content;
       this.filterContentByCourseId(); 
     });
   }
 
-  createContent() {
+  public createContent() {
     this.newContent.courseId = this.selectedCourseId;
     this.contentService.createContent(this.newContent).subscribe(
       (response) => {
@@ -67,7 +67,7 @@ export class ContentManagementComponent implements OnInit {
     );
   }
 
-  editContent(contentId: string) {
+  public editContent(contentId: string) {
     const contentToEdit = this.allContent.find((content) => content.id === contentId);
   
     if (contentToEdit) {
@@ -93,7 +93,7 @@ export class ContentManagementComponent implements OnInit {
     }
   }
 
-  deleteContent(contentId: string) {
+  public deleteContent(contentId: string) {
     this.contentService.deleteContentById(contentId).subscribe(
       (response) => {
         console.log('Content deleted:', response);
@@ -104,9 +104,7 @@ export class ContentManagementComponent implements OnInit {
       }
     );
   }
-  viewContentDetails(contentId: number) {
+  public viewContentDetails(contentId: number) {
     this.router.navigate(['/content-details', contentId]);
   }
-
-
 }

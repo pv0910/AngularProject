@@ -7,7 +7,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./edit-content.component.css']
 })
 export class EditContentComponent implements OnInit {
-  editedContent: any = {};
+  public editedContent: any = {};
 
   constructor(
     public dialogRef: MatDialogRef<EditContentComponent>,
@@ -18,11 +18,11 @@ export class EditContentComponent implements OnInit {
     this.editedContent = { ...this.data };
   }
 
-  saveChanges(): void {
+  public saveChanges(): void {
     this.dialogRef.close(this.editedContent);
   }
 
-  closeDialog(): void {
+  public closeDialog(): void {
     this.dialogRef.close();
   }
 }

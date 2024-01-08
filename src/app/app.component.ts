@@ -6,8 +6,8 @@ import { Component,DoCheck } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements DoCheck {
-  title="Learning Management System";
-  isadmin=false;
+  public title="Learning Management System";
+  public isadmin=false;
   constructor(){}
   public isloggedin(){
     return sessionStorage.getItem('username')!=null;

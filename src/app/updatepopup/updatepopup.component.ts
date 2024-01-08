@@ -24,10 +24,10 @@ export class UpdatepopupComponent implements OnInit {
       this.loaduserdata(this.data.usercode);
     }
   }
-  rolelist: any;
-  editdata: any;
+  public rolelist: any;
+  public editdata: any;
 
-  registerform = this.builder.group({
+  public registerform = this.builder.group({
     id: this.builder.control(''),
     name: this.builder.control(''),
     password: this.builder.control(''),
@@ -37,7 +37,7 @@ export class UpdatepopupComponent implements OnInit {
     isactive: this.builder.control(false)
   });
 
-  loaduserdata(code: any) {
+  public loaduserdata(code: any) {
     this.service.GetUserbyCode(code).subscribe(res => {
       this.editdata = res;
       console.log(this.editdata);
@@ -48,7 +48,7 @@ export class UpdatepopupComponent implements OnInit {
       });
     });
   }
-  UpdateUser() {
+  public UpdateUser() {
     this.service.updateuser(this.registerform.value.id, this.registerform.value).subscribe(res => {
       this.toastr.success('Updated successfully.');
       this.dialogref.close();

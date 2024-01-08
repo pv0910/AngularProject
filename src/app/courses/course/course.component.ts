@@ -8,8 +8,8 @@ import { CoursesService } from 'src/services/courses.service';
   styleUrls: ['./course.component.css'],
 })
 export class CourseComponent implements OnInit {
-  course: any;
-  courseId: any;
+  public course: any;
+  public courseId: any;
 
   constructor(private service: CoursesService, private route: ActivatedRoute) {}
 

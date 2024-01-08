@@ -10,7 +10,7 @@ export class ContentManagementService {
 
   constructor(private http: HttpClient) {}
 
-  createContent(contentData: any): Observable<any> {
+  public createContent(contentData: any): Observable<any> {
     return this.http.post(`${this.apiUrl}`, contentData).pipe(
       catchError((error) => {
         console.error('Error creating content:', error);
@@ -18,20 +18,20 @@ export class ContentManagementService {
       })
     );
   }
-  updateContent(contentId: string, updatedContent: any): Observable<any> {
+  public updateContent(contentId: string, updatedContent: any): Observable<any> {
     return this.http.put<any>(`${this.apiUrl}/${contentId}`, updatedContent);
   }
-  getAllContent(): Observable<any> {
+  public getAllContent(): Observable<any> {
     return this.http.get(`${this.apiUrl}`);
   }
-  deleteContentById(contentId: string): Observable<any> {
+  public deleteContentById(contentId: string): Observable<any> {
     return this.http.delete(`${this.apiUrl}/${contentId}`);
   }
 
-  getContentByCourseId(courseId: number): Observable<any> {
+  public getContentByCourseId(courseId: number): Observable<any> {
     return this.http.get(`${this.apiUrl}?courseId=${courseId}`);
   }
-  getContentDetails(contentId: number): Observable<any> {
+  public getContentDetails(contentId: number): Observable<any> {
     const url = `${this.apiUrl}/${contentId}`;
     return this.http.get<any>(url);
   }
