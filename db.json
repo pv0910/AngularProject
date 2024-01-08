@@ -142,11 +142,6 @@
   ],
   "enrollments": [
     {
-      "courseId": 103,
-      "userId": "pjvpjv",
-      "id": 1
-    },
-    {
       "courseId": 101,
       "userId": "pjvpjv",
       "id": 2

@@ -6,15 +6,30 @@ body {
 }
 
 .header {
-    background-color: #eb5172;
-    color: #fff;
     text-align: center;
     padding: 20px;
     margin-top: 5px;
+    background-color: #eb5172;
+    color: #fff;
 }
 
-.header a{
-    display:inline-block;
+.header h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.header img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.header p {
+    margin-bottom: 10px;
+}
+
+.header a {
+    display: inline-block;
     margin-top: 10px;
     padding: 8px 15px;
     background-color: #516beb;
@@ -22,16 +37,10 @@ body {
     text-decoration: none;
     border-radius: 3px;
 }
+
 section {
     margin: 20px;
     padding: auto;
-    
-}
-
-.header div{
-    color: #fff;
-    cursor: pointer;
-    border-radius: 3px;
 }
 
 h2 {
@@ -40,9 +49,15 @@ h2 {
     padding-bottom: 5px;
 }
 
+.featured-courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .course {
+    width: 45%;
     background-color: #fff;
-    height: 100px;
     padding: 15px;
     margin: 10px;
     border-radius: 5px;
@@ -57,12 +72,6 @@ h2 {
     color: #555;
 }
 
-.featured-courses {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
 footer {
     background-color: #516beb;
     color: #fff;
@@ -71,4 +80,14 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .header img {
+        width: 100%; 
+    }
+
+    .course {
+        width: 100%; 
+    }
 }

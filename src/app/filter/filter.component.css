@@ -5,3 +5,13 @@
 input[type=radio]{
     margin-left: 10px;
 }
+
+@media only screen and (max-width: 767px) {
+    .filter-container {
+        margin: 5px 10px; 
+    }
+
+    input[type=radio] {
+        margin-left: 5px; 
+    }
+}

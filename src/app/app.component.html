@@ -17,9 +17,9 @@
       <li class="nav-item" [routerLinkActive]= "'active'" *ngIf="isloggedin()">
         <a routerLink="/profile">Profile</a>
       </li>
-      <form class="d-flex" role="search">
-        <button *ngIf="isloggedin()" class="btn btn-outline-light" type="submit" routerLink="/login">Logout</button>
-      </form>
+      <li class="nav-item" [routerLinkActive]="'active'" *ngIf="isloggedin()">
+        <a routerLink="/login">Logout</a>
+      </li>
     </ul>
   </div>
 </nav>
