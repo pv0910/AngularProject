@@ -1,30 +1,30 @@
-<body>
+  <body>
     <div class="container">
-      <div>
+      <div class="image-container">
         <img src="assets/loginimg.jpeg" alt="Login Image">
       </div>
-      <div class="form">
-        <mat-card>
-          <mat-card-header>
-              <h2>User Login</h2>
-          </mat-card-header>
+      <div class="form-container">
+        <div class="mat-card">
+          <div class="mat-card-header">
+            <h2>User Login</h2>
+          </div>
           <mat-card-content>
-              <form class="example-form" [formGroup]="loginform" (ngSubmit)="proceedlogin()">
-                  <mat-form-field class="example-full-width">
-                    <mat-label>Username</mat-label>
-                    <input matInput formControlName="id" >
-                  </mat-form-field>
-                  <mat-form-field class="example-full-width">
-                    <mat-label>Password</mat-label>
-                    <input matInput type="password" formControlName="password" >
-                  </mat-form-field>
-                  <div>
-                    <button mat-raised-button color="primary">Login</button>
-                    <a routerLink="/register" mat-raised-button color="accent">New User?</a>
-                  </div>
-              </form>
-          </mat-card-content>
-        </mat-card>
+            <form class="form" [formGroup]="loginform" (ngSubmit)="proceedlogin()">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Username</mat-label>
+                  <input matInput formControlName="id" >
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                  <mat-label>Password</mat-label>
+                  <input matInput type="password" formControlName="password" >
+                </mat-form-field>
+                <div>
+                  <button mat-raised-button color="primary">Login</button>
+                  <a routerLink="/register" mat-raised-button color="accent">New User?</a>
+                </div>
+            </form>
+        </mat-card-content>
+        </div>
       </div>
     </div>
   </body>
