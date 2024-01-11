@@ -2,7 +2,7 @@
   "user": [
     {
       "id": "pjvpjv",
-      "name": "pooja",
+      "name": "poojaVerma",
       "password": "Pooja@90045",
       "email": "pjv9@gmail.com",
       "gender": "female",
@@ -25,6 +25,24 @@
       "email": "kv@gmail.com",
       "gender": "female",
       "role": "instructor",
+      "isactive": true
+    },
+    {
+      "id": "pjv1122",
+      "name": "Pooja",
+      "password": "Pooja@9004",
+      "email": "pjv@gmail.com",
+      "gender": "female",
+      "role": "learner",
+      "isactive": true
+    },
+    {
+      "id": "pj1234",
+      "name": "Pooja",
+      "password": "Pooja@9004",
+      "email": "pj@gmail.com",
+      "gender": "female",
+      "role": "learner",
       "isactive": true
     }
   ],
@@ -150,6 +168,11 @@
       "courseId": 101,
       "userId": "khushi12",
       "id": 3
+    },
+    {
+      "courseId": 101,
+      "userId": "pjv1122",
+      "id": 4
     }
   ],
   "resources": [
@@ -208,97 +231,10 @@
   "content": [
     {
       "id": 1,
-      "title": "Lecture 1: Introduction to JavaScript",
+      "title": "Lecture 1: Introduction to Javascript",
       "type": "Lecture1",
       "courseId": 101,
-      "contentDetails": [
-        {
-          "id": 1,
-          "title": "Introduction",
-          "type": "Subsection",
-          "courseId": 101,
-          "contentDetails": [
-            {
-              "id": 1,
-              "title": "Brief history and purpose of JavaScript.",
-              "type": "Topic",
-              "courseId": 101
-            },
-            {
-              "id": 2,
-              "title": "JavaScript's role in web development.",
-              "type": "Topic",
-              "courseId": 101
-            }
-          ]
-        },
-        {
-          "id": 2,
-          "title": "Setting Up",
-          "type": "Subsection",
-          "courseId": 101,
-          "contentDetails": [
-            {
-              "id": 3,
-              "title": "Embedding JavaScript in HTML.",
-              "type": "Topic",
-              "courseId": 101
-            },
-            {
-              "id": 4,
-              "title": "Using the browser's developer tools.",
-              "type": "Topic",
-              "courseId": 101
-            }
-          ]
-        },
-        {
-          "id": 3,
-          "title": "Basic Syntax",
-          "type": "Subsection",
-          "courseId": 101,
-          "contentDetails": [
-            {
-              "id": 5,
-              "title": "Variables and data types.",
-              "type": "Topic",
-              "courseId": 101
-            },
-            {
-              "id": 6,
-              "title": "Operators.",
-              "type": "Topic",
-              "courseId": 101
-            },
-            {
-              "id": 7,
-              "title": "Comments.",
-              "type": "Topic",
-              "courseId": 101
-            }
-          ]
-        },
-        {
-          "id": 4,
-          "title": "Control Flow",
-          "type": "Subsection",
-          "courseId": 101,
-          "contentDetails": [
-            {
-              "id": 8,
-              "title": "Conditional statements (if, else if, else).",
-              "type": "Topic",
-              "courseId": 101
-            },
-            {
-              "id": 9,
-              "title": "Looping (for, while).",
-              "type": "Topic",
-              "courseId": 101
-            }
-          ]
-        }
-      ],
+      "contentDetails": "Introduction to JavaScript.",
       "file": "lecture1.pdf"
     },
     {
@@ -306,74 +242,7 @@
       "title": "Lecture 2: Functions and Objects",
       "type": "Lecture2",
       "courseId": 101,
-      "contentDetails": [
-        {
-          "id": 1,
-          "title": "Functions",
-          "type": "Subsection",
-          "courseId": 101,
-          "contentDetails": [
-            {
-              "id": 1,
-              "title": "Declaring functions.",
-              "type": "Topic",
-              "courseId": 101
-            },
-            {
-              "id": 2,
-              "title": "Parameters and return values.",
-              "type": "Topic",
-              "courseId": 101
-            },
-            {
-              "id": 3,
-              "title": "Function expressions.",
-              "type": "Topic",
-              "courseId": 101
-            }
-          ]
-        },
-        {
-          "id": 2,
-          "title": "Objects",
-          "type": "Subsection",
-          "courseId": 101,
-          "contentDetails": [
-            {
-              "id": 4,
-              "title": "Creating and manipulating objects.",
-              "type": "Topic",
-              "courseId": 101
-            },
-            {
-              "id": 5,
-              "title": "Object properties and methods.",
-              "type": "Topic",
-              "courseId": 101
-            }
-          ]
-        },
-        {
-          "id": 3,
-          "title": "Arrays",
-          "type": "Subsection",
-          "courseId": 101,
-          "contentDetails": [
-            {
-              "id": 6,
-              "title": "Creating and manipulating arrays.",
-              "type": "Topic",
-              "courseId": 101
-            },
-            {
-              "id": 7,
-              "title": "Array methods (push, pop, shift, unshift, etc.).",
-              "type": "Topic",
-              "courseId": 101
-            }
-          ]
-        }
-      ],
+      "contentDetails": "Functions and Objects",
       "file": "lecture2.pdf"
     },
     {
@@ -429,92 +298,11 @@
     },
     {
       "id": 4,
-      "title": "Lecture 1: Introduction to Web Development",
+      "title": "Lecture 1",
       "type": "Lecture1",
       "courseId": 102,
-      "contentDetails": [
-        {
-          "id": 1,
-          "title": "Introduction",
-          "type": "Subsection",
-          "courseId": 102,
-          "contentDetails": [
-            {
-              "id": 1,
-              "title": "Overview of Web Development",
-              "type": "Topic",
-              "courseId": 102
-            },
-            {
-              "id": 2,
-              "title": "Importance of HTML and CSS",
-              "type": "Topic",
-              "courseId": 102
-            }
-          ]
-        },
-        {
-          "id": 2,
-          "title": "HTML Basics",
-          "type": "Subsection",
-          "courseId": 102,
-          "contentDetails": [
-            {
-              "id": 3,
-              "title": "Understanding HTML Structure",
-              "type": "Topic",
-              "courseId": 102
-            },
-            {
-              "id": 4,
-              "title": "HTML Elements and Tags",
-              "type": "Topic",
-              "courseId": 102
-            }
-          ]
-        },
-        {
-          "id": 3,
-          "title": "CSS Basics",
-          "type": "Subsection",
-          "courseId": 102,
-          "contentDetails": [
-            {
-              "id": 5,
-              "title": "Introduction to CSS",
-              "type": "Topic",
-              "courseId": 102
-            },
-            {
-              "id": 6,
-              "title": "Selectors and Styles",
-              "type": "Topic",
-              "courseId": 102
-            }
-          ]
-        },
-        {
-          "id": 4,
-          "title": "Responsive Design",
-          "type": "Subsection",
-          "courseId": 102,
-          "contentDetails": [
-            {
-              "id": 7,
-              "title": "Media Queries",
-              "type": "Topic",
-              "courseId": 102
-            },
-            {
-              "id": 8,
-              "title": "Flexbox and Grid Layout",
-              "type": "Topic",
-              "courseId": 102
-            }
-          ]
-        }
-      ],
-      "file": "web-development-lecture1.pdf"
+      "contentDetails": "Introduction to Web Development",
+      "file": "lecture1.pdf"
     },
     {
       "id": 6,
@@ -586,6 +374,14 @@
           }
         ]
       }
+    },
+    {
+      "title": "nbnb",
+      "type": "Assignment",
+      "contentDetails": "jbjk",
+      "file": "jbk",
+      "courseId": 101,
+      "id": 8
     }
   ]
 }

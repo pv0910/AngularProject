@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { CoursesService } from 'src/services/courses.service';
-import { AddCourseComponent } from './add-course/add-course.component';
+import { AddCourseComponent } from '../add-course/add-course.component';
 import { ToastrService } from 'ngx-toastr';
 import { EnrollmentService } from 'src/services/enrollment.service';
 import { tap } from 'rxjs';

@@ -7,7 +7,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./edit-content.component.css']
 })
 export class EditContentComponent implements OnInit {
-  public editedContent: any = {};
+ public editedContent: any = {};
 
   constructor(
     public dialogRef: MatDialogRef<EditContentComponent>,

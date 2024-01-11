@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
-import { UserlistingComponent } from './userlisting/userlisting.component';
-import { CoursesComponent } from './courses/courses.component';
-import { CourseComponent } from './courses/course/course.component';
+import { HomeComponent } from './components/home/home.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
+import { UserlistingComponent } from './components/userlisting/userlisting.component';
+import { CoursesComponent } from './components/courses/courses.component';
+import { CourseComponent } from './components/courses/course/course.component';
 import { AuthGuard } from '../guard/auth.guard';
-import { ProfileComponent } from './profile/profile.component';
-import { LibraryComponent } from './library/library.component';
-import { ContentManagementComponent } from './courses/content-management/content-management.component';
-import { ViewContentDetailsComponent } from './courses/content-management/view-content-details/view-content-details.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { LibraryComponent } from './components/library/library.component';
+import { ContentManagementComponent } from './components/content-management/content-management.component';
+import { ViewContentDetailsComponent } from './components/content-management/view-content-details/view-content-details.component';
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'register',component:RegisterComponent},
