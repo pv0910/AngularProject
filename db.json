@@ -44,6 +44,15 @@
       "gender": "female",
       "role": "learner",
       "isactive": true
+    },
+    {
+      "id": "pjv123",
+      "name": "Pooja",
+      "password": "Pooja@123",
+      "email": "pjv2@gmail.com",
+      "gender": "male",
+      "role": "learner",
+      "isactive": true
     }
   ],
   "role": [

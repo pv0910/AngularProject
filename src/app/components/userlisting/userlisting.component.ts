@@ -1,5 +1,5 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms'
+import { Component, ViewChild } from '@angular/core';
+import { FormBuilder } from '@angular/forms'
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
@@ -12,7 +12,7 @@ import { UpdatepopupComponent } from '../updatepopup/updatepopup.component'
   templateUrl: './userlisting.component.html',
   styleUrls: ['./userlisting.component.css']
 })
-export class UserlistingComponent implements AfterViewInit {
+export class UserlistingComponent {
 
   constructor(private builder: FormBuilder, private service: AuthService, private dialog: MatDialog) {
     this.LoadUser();
@@ -22,9 +22,6 @@ export class UserlistingComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  ngAfterViewInit(): void {
-
-  }
   public LoadUser() {
     this.service.Getall().subscribe(res => {
       this.userlist = res;

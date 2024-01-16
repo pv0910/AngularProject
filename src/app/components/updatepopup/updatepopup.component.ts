@@ -12,7 +12,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 export class UpdatepopupComponent implements OnInit {
 
   constructor(private builder: FormBuilder, private service: AuthService, private toastr: ToastrService,
-    private dialogref: MatDialogRef<UpdatepopupComponent>, @Inject(MAT_DIALOG_DATA) public data: any) {
+    public dialogref: MatDialogRef<UpdatepopupComponent>, @Inject(MAT_DIALOG_DATA) public data: any) {
 
     this.service.getuserrole().subscribe(res => {
       this.rolelist = res;

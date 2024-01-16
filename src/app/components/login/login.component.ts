@@ -11,7 +11,7 @@ import { AuthService } from '../../../services/auth.service';
 })
 export class LoginComponent {
   constructor(private builder: FormBuilder, private toastr: ToastrService, private service: AuthService,
-    private router: Router) {
+    public router: Router) {
       sessionStorage.clear();
 
   }
